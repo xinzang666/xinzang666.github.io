@@ -1,0 +1,619 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>网页 | H-Blog</title><meta name="author" content="xin"><meta name="copyright" content="xin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="目录 标签   标签  标题标签 &lt;h1&gt;&lt;&#x2F;h1&gt;-&lt;h6&gt;&lt;&#x2F;h6&gt;  段落标签 &lt;p&gt;&lt;&#x2F;p&gt;  换行标签 &lt;br &#x2F;&gt;  盒子 &lt;div&gt;&lt;&#x2F;div&gt;   独占一行   &lt;span&gt;&lt;&#x2F;span&gt;   一行多个  图像标签 &lt;img src&#x3D;&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页">
+<meta property="og:url" content="http://example.com/2024/08/13/%E7%BD%91%E9%A1%B5/index.html">
+<meta property="og:site_name" content="H-Blog">
+<meta property="og:description" content="目录 标签   标签  标题标签 &lt;h1&gt;&lt;&#x2F;h1&gt;-&lt;h6&gt;&lt;&#x2F;h6&gt;  段落标签 &lt;p&gt;&lt;&#x2F;p&gt;  换行标签 &lt;br &#x2F;&gt;  盒子 &lt;div&gt;&lt;&#x2F;div&gt;   独占一行   &lt;span&gt;&lt;&#x2F;span&gt;   一行多个  图像标签 &lt;img src&#x3D;&quot;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/touxiang.png">
+<meta property="article:published_time" content="2024-08-13T03:42:45.000Z">
+<meta property="article:modified_time" content="2024-08-15T06:47:02.474Z">
+<meta property="article:author" content="xin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/touxiang.png"><link rel="shortcut icon" href="/img/touxiang.png"><link rel="canonical" href="http://example.com/2024/08/13/%E7%BD%91%E9%A1%B5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '网页',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-15 14:47:02'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', () => { preloader.initLoading() }, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', () => { preloader.endLoading() }, 'preloader_end')
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/touxiang.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="H-Blog"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/tubiao.jpg" alt="Logo"/><span class="site-name">H-Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">网页</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-13T03:42:45.000Z" title="发表于 2024-08-13 11:42:45">2024-08-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-15T06:47:02.474Z" title="更新于 2024-08-15 14:47:02">2024-08-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="网页"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
+<li><a href="#biaoqian">标签</a></li>
+</ol>
+ <h2 id="biaoqian">标签
+
+<h3 id="标题标签"><a href="#标题标签" class="headerlink" title="标题标签"></a>标题标签</h3><ul>
+<li><code>&lt;h1&gt;&lt;/h1&gt;-&lt;h6&gt;&lt;/h6&gt;</code></li>
+</ul>
+<h3 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签"></a>段落标签</h3><ul>
+<li><code>&lt;p&gt;&lt;/p&gt;</code></li>
+</ul>
+<h3 id="换行标签"><a href="#换行标签" class="headerlink" title="换行标签"></a>换行标签</h3><ul>
+<li><code>&lt;br /&gt;</code></li>
+</ul>
+<h3 id="盒子"><a href="#盒子" class="headerlink" title="盒子"></a>盒子</h3><ol>
+<li><code>&lt;div&gt;&lt;/div&gt;</code></li>
+</ol>
+<ul>
+<li>独占一行</li>
+</ul>
+<ol start="2">
+<li><code>&lt;span&gt;&lt;/span&gt;</code></li>
+</ol>
+<ul>
+<li>一行多个</li>
+</ul>
+<h3 id="图像标签"><a href="#图像标签" class="headerlink" title="图像标签"></a>图像标签</h3><ul>
+<li><code>&lt;img src=&quot;&quot; alt=&quot;&quot; title=&quot;&quot; width=&quot;&quot; height=&quot;&quot; border=&quot;&quot;/&gt;</code><ul>
+<li>解释：src 路径 alt 替换文本（图片显示不出时） title 提示文本（鼠标放到图片上时） w和h一般只修改一个 border 边框大小</li>
+</ul>
+</li>
+</ul>
+<h3 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h3><ul>
+<li><code>&lt;a href=&quot;&quot; target=&quot;&quot; &gt;&lt;/a&gt;</code><ul>
+<li>target&#x3D;”_self” 在当前窗口打开页面 ， _blank 在新窗口打开页面</li>
+</ul>
+</li>
+<li>压缩包 <code>&lt;a href=&quot;.zip&quot;&gt;&lt;/a&gt;</code></li>
+<li>网页元素链接 <code>&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;&quot;/&gt;&lt;/a&gt;</code></li>
+</ul>
+<h3 id="锚点链接"><a href="#锚点链接" class="headerlink" title="锚点链接"></a>锚点链接</h3><ul>
+<li><code>&lt;a href=&quot;#name&quot;&gt;&lt;/a&gt;</code><br><code>&lt;h3 id=&quot;name&quot;&gt;</code></li>
+</ul>
+<h3 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h3><h4 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h4><ol>
+<li><code>&lt;strong&gt;&lt;/strong&gt;</code></li>
+<li><code>&lt;b&gt;&lt;/b&gt;</code></li>
+</ol>
+<h4 id="倾斜"><a href="#倾斜" class="headerlink" title="倾斜"></a>倾斜</h4><ol>
+<li><code>&lt;em&gt;&lt;/em&gt;</code></li>
+<li><code>&lt;i&gt;&lt;/i&gt;</code></li>
+</ol>
+<h4 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h4><ol>
+<li><code>&lt;del&gt;&lt;/del&gt;</code></li>
+<li><code>&lt;s&gt;&lt;/s&gt;</code></li>
+</ol>
+<h4 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h4><ol>
+<li><code>&lt;ins&gt;&lt;/ins&gt;</code></li>
+<li><code>&lt;u&gt;&lt;/u&gt;</code></li>
+</ol>
+<h3 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h3><ol>
+<li>表格（2-5标签放在此标签里）</li>
+</ol>
+<ul>
+<li><code>&lt;table align=&quot;&quot; border=&quot;&quot; cellpadding=&quot;&quot; cellspacing=&quot;&quot; width=&quot;&quot;&gt;&lt;/table&gt;</code> <ul>
+<li>表格属性<br>  <strong>align对齐方式（left，right，center）</strong> <strong>border&#x3D;”1”边框</strong> <strong>cellpadding&#x3D;”20”边框与内容的距离</strong> <strong>cellspacing&#x3D;”0”单元格与单元格之间的空隙</strong> <strong>width，height单元格宽高</strong></li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>表格结构标签<ol>
+<li>表格头部</li>
+</ol>
+<ul>
+<li><code>&lt;thead&gt;&lt;/thead&gt;</code></li>
+</ul>
+<ol start="2">
+<li>表格身体</li>
+</ol>
+<ul>
+<li><code>&lt;tbody&gt;&lt;/tbody&gt;</code></li>
+</ul>
+</li>
+<li>行</li>
+</ol>
+<ul>
+<li><code>&lt;tr&gt;&lt;/tr&gt;</code></li>
+</ul>
+<ol start="4">
+<li>表头单元格-文字加粗居中</li>
+</ol>
+<ul>
+<li><code>&lt;th&gt;&lt;/th&gt;</code></li>
+</ul>
+<ol start="5">
+<li>单元格</li>
+</ol>
+<ul>
+<li><code>&lt;td&gt;&lt;/td&gt;</code><ol>
+<li>合并单元格<ul>
+<li>跨行合并：rowspan&#x3D;”” （写在最上侧目标单元格）<ul>
+<li><code>&lt;table&gt;</code><br>  <code>&lt;tr&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;/tr&gt;</code><br>  <code>&lt;tr&gt;</code><br>  <code>&lt;td rowspan=&quot;2&quot;&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;/tr&gt;</code><br>  <code>&lt;tr&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;/tr&gt;</code><br> <code>&lt;/table&gt;</code></li>
+</ul>
+</li>
+<li>跨列合并：colspan&#x3D;”” （写在最左侧目标单元格<ul>
+<li><code>&lt;table&gt;</code><br>  <code>&lt;tr&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td colspan=&quot;2&quot;&gt;&lt;/td&gt;</code><br>  <code>&lt;/tr&gt;</code><br>  <code>&lt;tr&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;/tr&gt;</code><br>  <code>&lt;tr&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;td&gt;&lt;/td&gt;</code><br>  <code>&lt;/tr&gt;</code><br> <code>&lt;/table&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h3><ol>
+<li>无序列表<ol>
+<li>ul里只有li，li可以放所有</li>
+</ol>
+<ul>
+<li><code>&lt;ul&gt;&lt;/ul&gt;</code></li>
+<li><code>&lt;li&gt;&lt;/li&gt;</code></li>
+</ul>
+</li>
+<li>有序列表<ul>
+<li><code>&lt;ol&gt;&lt;/ol&gt;</code></li>
+<li><code>&lt;li&gt;&lt;/li&gt;</code></li>
+</ul>
+</li>
+<li>自定义列表<ul>
+<li><code>&lt;dl&gt;</code><br>  <code>&lt;dt&gt;&lt;/dt&gt;</code><br>  <code>&lt;dd&gt;&lt;/dd&gt;</code><br>  <code>&lt;dd&gt;&lt;/dd&gt;</code><br> <code>&lt;/dl&gt;</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h3><ol>
+<li>表单域（2-5写在里面）<ul>
+<li><code>&lt;form action=&quot;demo.php&quot; method=&quot;POST&quot; name=&quot;name1&quot;&gt;&lt;/form&gt;</code></li>
+</ul>
+</li>
+<li>input<ul>
+<li><code>&lt;input type=&quot;&quot; name=&quot;&quot; value=&quot;&quot; checked=&quot;checked&quot; maxlength=&quot;&quot;&gt;</code></li>
+<li>type值<ul>
+<li>text：文本框</li>
+<li>password：密码</li>
+<li>radio：单选按钮 （配合相同name属性使用）</li>
+<li>checkbox：复选框 （配合相同name属性使用）</li>
+<li>submit：提交按钮</li>
+<li>reset：重置按钮</li>
+<li>button：普通按钮</li>
+<li>file：上传文件<br> <code>&lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;请输入用户名：&quot; maxlength=&quot;6&quot;&gt;</code><br> <code>&lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;</code><br> <code>男：&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;男&quot;&gt; 女：&lt;input type=&quot;radio&quot; name=&quot;sex&quot;&gt;</code><br> <code>吃饭：&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;吃饭&quot;&gt; 睡觉：&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; checked=&quot;checked&quot;&gt;</code><br> &#96;<input type="submit" value="免费注册"></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>value：显示（在text框中显示文字）</li>
+<li>checked：默认选中（单选、复选）</li>
+<li>maxlength：最大长度</li>
+</ul>
+</li>
+<li>label标签（与表单搭配）</li>
+</ol>
+<ul>
+<li>注：for与id内容一致</li>
+</ul>
+<ul>
+<li><code>&lt;label for=&quot;text&quot;&gt; 用户名：&lt;/label&gt;</code><br><code>&lt;input type=&quot;text&quot; id=&quot;text&quot;&gt;</code></li>
+<li>效果：增大选中范围</li>
+</ul>
+<ol start="4">
+<li>select（下拉列表）<br><code>&lt;select&gt;</code><br> <code>&lt;option&gt;&lt;/option&gt;</code><br> <code>&lt;option selected=&quot;selected&quot;&gt;&lt;/option&gt;</code><br><code>&lt;/select&gt;</code></li>
+</ol>
+<ul>
+<li>selected：默认选中项</li>
+</ul>
+<ol start="5">
+<li>textarea 文本域<br><code>&lt;textarea&gt;&lt;/textarea&gt;</code></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">xin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/08/13/%E7%BD%91%E9%A1%B5/">http://example.com/2024/08/13/%E7%BD%91%E9%A1%B5/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">H-Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/touxiang.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/08/15/css/" title="css"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">css</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/30/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#biaoqian"><span class="toc-number">1.1.</span> <span class="toc-text">标签
+
+标题标签
+&lt;h1&gt;&lt;&#x2F;h1&gt;-&lt;h6&gt;&lt;&#x2F;h6&gt;
+
+段落标签
+&lt;p&gt;&lt;&#x2F;p&gt;
+
+换行标签
+&lt;br &#x2F;&gt;
+
+盒子
+&lt;div&gt;&lt;&#x2F;div&gt;
+
+
+独占一行
+
+
+&lt;span&gt;&lt;&#x2F;span&gt;
+
+
+一行多个
+
+图像标签
+&lt;img src&#x3D;&quot;&quot; alt&#x3D;&quot;&quot; title&#x3D;&quot;&quot; width&#x3D;&quot;&quot; height&#x3D;&quot;&quot; border&#x3D;&quot;&quot;&#x2F;&gt;
+解释：src 路径 alt 替换文本（图片显示不出时） title 提示文本（鼠标放到图片上时） w和h一般只修改一个 border 边框大小
+
+
+
+链接标签
+&lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;&quot; &gt;&lt;&#x2F;a&gt;
+target&#x3D;”_self” 在当前窗口打开页面 ， _blank 在新窗口打开页面
+
+
+压缩包 &lt;a href&#x3D;&quot;.zip&quot;&gt;&lt;&#x2F;a&gt;
+网页元素链接 &lt;a href&#x3D;&quot;&quot;&gt;&lt;img src&#x3D;&quot;&quot;&#x2F;&gt;&lt;&#x2F;a&gt;
+
+锚点链接
+&lt;a href&#x3D;&quot;#name&quot;&gt;&lt;&#x2F;a&gt;&lt;h3 id&#x3D;&quot;name&quot;&gt;
+
+文本格式化标签加粗
+&lt;strong&gt;&lt;&#x2F;strong&gt;
+&lt;b&gt;&lt;&#x2F;b&gt;
+
+倾斜
+&lt;em&gt;&lt;&#x2F;em&gt;
+&lt;i&gt;&lt;&#x2F;i&gt;
+
+删除线
+&lt;del&gt;&lt;&#x2F;del&gt;
+&lt;s&gt;&lt;&#x2F;s&gt;
+
+下划线
+&lt;ins&gt;&lt;&#x2F;ins&gt;
+&lt;u&gt;&lt;&#x2F;u&gt;
+
+表格标签
+表格（2-5标签放在此标签里）
+
+
+&lt;table align&#x3D;&quot;&quot; border&#x3D;&quot;&quot; cellpadding&#x3D;&quot;&quot; cellspacing&#x3D;&quot;&quot; width&#x3D;&quot;&quot;&gt;&lt;&#x2F;table&gt; 
+表格属性  align对齐方式（left，right，center） border&#x3D;”1”边框 cellpadding&#x3D;”20”边框与内容的距离 cellspacing&#x3D;”0”单元格与单元格之间的空隙 width，height单元格宽高
+
+
+
+
+表格结构标签
+表格头部
+
+
+&lt;thead&gt;&lt;&#x2F;thead&gt;
+
+
+表格身体
+
+
+&lt;tbody&gt;&lt;&#x2F;tbody&gt;
+
+
+行
+
+
+&lt;tr&gt;&lt;&#x2F;tr&gt;
+
+
+表头单元格-文字加粗居中
+
+
+&lt;th&gt;&lt;&#x2F;th&gt;
+
+
+单元格
+
+
+&lt;td&gt;&lt;&#x2F;td&gt;
+合并单元格
+跨行合并：rowspan&#x3D;”” （写在最上侧目标单元格）
+&lt;table&gt;  &lt;tr&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;&#x2F;tr&gt;  &lt;tr&gt;  &lt;td rowspan&#x3D;&quot;2&quot;&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;&#x2F;tr&gt;  &lt;tr&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;&#x2F;tr&gt; &lt;&#x2F;table&gt;
+
+
+跨列合并：colspan&#x3D;”” （写在最左侧目标单元格
+&lt;table&gt;  &lt;tr&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td colspan&#x3D;&quot;2&quot;&gt;&lt;&#x2F;td&gt;  &lt;&#x2F;tr&gt;  &lt;tr&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;&#x2F;tr&gt;  &lt;tr&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;td&gt;&lt;&#x2F;td&gt;  &lt;&#x2F;tr&gt; &lt;&#x2F;table&gt;
+
+
+
+
+
+
+
+列表标签
+无序列表
+ul里只有li，li可以放所有
+
+
+&lt;ul&gt;&lt;&#x2F;ul&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+
+
+有序列表
+&lt;ol&gt;&lt;&#x2F;ol&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+
+
+自定义列表
+&lt;dl&gt;  &lt;dt&gt;&lt;&#x2F;dt&gt;  &lt;dd&gt;&lt;&#x2F;dd&gt;  &lt;dd&gt;&lt;&#x2F;dd&gt; &lt;&#x2F;dl&gt;
+
+
+
+表单标签
+表单域（2-5写在里面）
+&lt;form action&#x3D;&quot;demo.php&quot; method&#x3D;&quot;POST&quot; name&#x3D;&quot;name1&quot;&gt;&lt;&#x2F;form&gt;
+
+
+input
+&lt;input type&#x3D;&quot;&quot; name&#x3D;&quot;&quot; value&#x3D;&quot;&quot; checked&#x3D;&quot;checked&quot; maxlength&#x3D;&quot;&quot;&gt;
+type值
+text：文本框
+password：密码
+radio：单选按钮 （配合相同name属性使用）
+checkbox：复选框 （配合相同name属性使用）
+submit：提交按钮
+reset：重置按钮
+button：普通按钮
+file：上传文件 &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;username&quot; value&#x3D;&quot;请输入用户名：&quot; maxlength&#x3D;&quot;6&quot;&gt; &lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;pwd&quot;&gt; 男：&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;sex&quot; value&#x3D;&quot;男&quot;&gt; 女：&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;sex&quot;&gt; 吃饭：&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;hobby&quot; value&#x3D;&quot;吃饭&quot;&gt; 睡觉：&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;hobby&quot; checked&#x3D;&quot;checked&quot;&gt; &#96;
+
+
+
+
+value：显示（在text框中显示文字）
+checked：默认选中（单选、复选）
+maxlength：最大长度
+
+
+label标签（与表单搭配）
+
+
+注：for与id内容一致
+
+
+&lt;label for&#x3D;&quot;text&quot;&gt; 用户名：&lt;&#x2F;label&gt;&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;text&quot;&gt;
+效果：增大选中范围
+
+
+select（下拉列表）&lt;select&gt; &lt;option&gt;&lt;&#x2F;option&gt; &lt;option selected&#x3D;&quot;selected&quot;&gt;&lt;&#x2F;option&gt;&lt;&#x2F;select&gt;
+
+
+selected：默认选中项
+
+
+textarea 文本域&lt;textarea&gt;&lt;&#x2F;textarea&gt;
+
+</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.1.</span> <span class="toc-text">标题标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.2.</span> <span class="toc-text">段落标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.3.</span> <span class="toc-text">换行标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%92%E5%AD%90"><span class="toc-number">1.1.4.</span> <span class="toc-text">盒子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.5.</span> <span class="toc-text">图像标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.6.</span> <span class="toc-text">链接标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%9A%E7%82%B9%E9%93%BE%E6%8E%A5"><span class="toc-number">1.1.7.</span> <span class="toc-text">锚点链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.8.</span> <span class="toc-text">文本格式化标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E7%B2%97"><span class="toc-number">1.1.8.1.</span> <span class="toc-text">加粗</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%80%BE%E6%96%9C"><span class="toc-number">1.1.8.2.</span> <span class="toc-text">倾斜</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-number">1.1.8.3.</span> <span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-number">1.1.8.4.</span> <span class="toc-text">下划线</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.9.</span> <span class="toc-text">表格标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.10.</span> <span class="toc-text">列表标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.11.</span> <span class="toc-text">表单标签</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By xin</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">欢迎！</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.14.0-b3"></script><script src="/js/main.js?v=4.14.0-b3"></script><script src="/js/tw_cn.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.0.5/dist/lazyload.iife.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
+  }
+
+  const panguInit = () => {
+    if (false){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const runMermaid = (ele) => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from(ele).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+    
+    codeMermaidEle.forEach(ele => {
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (false) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+  
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
